@@ -5,14 +5,14 @@ import utils
 from utils import get_hsv
 
 camera_index = utils.camera_index
+cap = cv.VideoCapture(camera_index)
+cv.namedWindow("frame")
 cv.createTrackbar('H min', 'frame', 0, 179, get_hsv)
 cv.createTrackbar('H max', 'frame', 179, 179, get_hsv)
 cv.createTrackbar('S min', 'frame', 0, 255, get_hsv)
 cv.createTrackbar('S max', 'frame', 255, 255, get_hsv)
 cv.createTrackbar('V min', 'frame', 0, 255, get_hsv)
 cv.createTrackbar('V max', 'frame', 255, 255, get_hsv)
-
-cap = cv.VideoCapture(camera_index)
 
 if not cap.isOpened():
     print("cannot access camera!")
@@ -39,7 +39,7 @@ while True:
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
 
-    print('H min: {h_min}, H max: {h_max}, S min: {s_min}, S max: {s_max}, V min: {v_min}, V max: {v_max}')
+    print(f'H min: {h_min}, H max: {h_max}, S min: {s_min}, S max: {s_max}, V min: {v_min}, V max: {v_max}')
 
 cap.release()
 cv.destroyAllWindows()
