@@ -1,5 +1,7 @@
 import numpy as np
 
+camera_index = 0
+
 def incr(a, b): return b >= a
 def decr(a, b): return a <= a
 def pp(a, b): return a >= 0 and b >= 0
@@ -24,3 +26,6 @@ def get_dir(x1, x2, y1, y2):
 
 def get_velocity(x1, x2, y1, y2, r, fps):
     return get_dir(x1, x2, y1, y2) * get_speed(x1, x2, y1, y2, r, fps)
+
+def get_hsv(val):
+    pass

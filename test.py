@@ -16,7 +16,7 @@ point_center = 0
 point_moving = 0
 prev_moving_x = 0
 prev_moving_y = 0
-camera_index = 0
+camera_index = utils.camera_index
 kernel = np.ones((5, 5), np.uint8)
 a = 0
 
