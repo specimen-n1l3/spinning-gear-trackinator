@@ -1,3 +1,9 @@
+#goals
+#detect the video feed from the camera
+#create the sliders
+#apply the color mask based on the slider values
+#print out the current slider state
+
 import cv2 as cv
 import numpy as np
 import os

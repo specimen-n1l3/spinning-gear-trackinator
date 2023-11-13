@@ -1,6 +1,8 @@
 import numpy as np
 
 camera_index = 0
+fps = 50
+kernel = np.ones((5, 5), np.uint8)
 
 def incr(a, b): return b >= a
 def decr(a, b): return a <= a
@@ -29,3 +31,8 @@ def get_velocity(x1, x2, y1, y2, r, fps):
 
 def get_hsv(val):
     pass
+
+def distance_pythag(dx, dy):
+    return np.sqrt(dy**2 + dx**2)
+
+

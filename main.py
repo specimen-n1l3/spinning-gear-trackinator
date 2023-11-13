@@ -84,13 +84,7 @@ while True:
             cv.circle(frame, point_moving, 2, (0, 0, 255), 3)
             cv.putText(frame, f'point_moving: {x_moving}, {y_moving}', (0, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
     
-
-
-
     #calculate the angle between the hor axis
-    if point_center and point_moving:
-        velocity = utils.get_velocity(x_center, x_moving, y_center, y_moving, r=(np.sqrt((y_moving - y_center)**2 + (x_moving - x_center)**2)), fps=fps)
-        cv.putText(frame, f'velocity: {velocity}', (0, 90), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
 
     if not ret:
         print("cannot receive frame!")
